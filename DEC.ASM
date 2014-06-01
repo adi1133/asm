@@ -13,23 +13,19 @@ start:
 
 main:
 	push bp
-	mov bp, sp;
-	push 123;
-	call dec;
-	add sp, 2;
-
+	mov bp, sp
+	mov ax, 123
+	call dec
 	call endl
-
-
 	
 	pop bp
 	
 
 	ret 
+
+
 dec:
 	mov cx, 0
-	
-	mov ax, WORD PTR bp[-2]
 dec_inner:
 
 	mov dx, 0 ; dx has mod result
